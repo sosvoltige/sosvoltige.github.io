@@ -1,3 +1,3 @@
-# github.io
+# Rémi Darnal
 
-Page personnelle de Rémi Darnal, formateur sécurité travail en hauteur, fondateur de [SOS Voltige](https://sosvoltige.fr).
+Formateur sécurité travail en hauteur, ex-cordiste. Site : [sosvoltige.fr](https://sosvoltige.fr)
