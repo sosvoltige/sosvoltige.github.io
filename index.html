@@ -6,53 +6,115 @@
 <title>Rémi Darnal — SOS Voltige</title>
 <meta name="description" content="Rémi Darnal, ancien cordiste devenu formateur sécurité travail en hauteur, fondateur de SOS Voltige.">
 <style>
-  html { background:#f4f2ef; }
-  body {
-    max-width: 620px;
-    margin: 3.5rem auto;
-    padding: 0 1.5rem 3rem;
-    font-family: "Trebuchet MS", Tahoma, sans-serif;
-    color:#211c16;
+  body { margin: 0; background: #f1efe9; font-family: Arial, Helvetica, sans-serif; color: #1c1a16; }
+  .bande-danger {
+    height: 14px;
+    background: repeating-linear-gradient(135deg, #f2b90c 0 14px, #1a1a1a 14px 28px);
   }
-  .rd-head { display:flex; gap:1rem; align-items:flex-start; border-bottom:1px solid #d8d2c6; padding-bottom:1.25rem; margin-bottom:1.25rem; }
-  .rd-head img { width:80px; height:80px; object-fit:cover; }
-  .rd-head h1 { font-size:1.35rem; margin:0 0 0.2rem; }
-  .rd-head p { margin:0; color:#5c564f; font-size:0.9rem; }
-  table.rd-cv { width:100%; border-collapse:collapse; margin-bottom:1.5rem; font-size:0.92rem; }
-  table.rd-cv td { padding:0.5rem 0; border-top:1px solid #e5e0d5; vertical-align:top; }
-  table.rd-cv td:first-child { width:130px; color:#8a8377; font-weight:bold; white-space:nowrap; }
-  .rd-story p { margin:0 0 0.9rem; }
-  .rd-quote { background:#e9e3d6; padding:0.9rem 1.1rem; margin:1.25rem 0; font-size:0.95rem; }
-  .rd-out { font-weight:bold; margin-top:1.5rem; }
-  .rd-out a { color:#a15206; }
-  .rd-foot { color:#948d80; font-size:0.82rem; margin-top:1.75rem; }
+  .page-secu { max-width: 600px; margin: 0 auto; background: #fff; box-shadow: 0 0 0 1px #ddd8cc; }
+  .badge-acces {
+    width: 110px;
+    margin: 2rem auto 0.5rem;
+    text-align: center;
+    padding: 0.6rem;
+    border: 3px solid #1a1a1a;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%, 0 80%);
+    background: #fff;
+  }
+  .badge-acces img { width: 100%; height: 90px; object-fit: cover; filter: grayscale(20%); display: block; }
+  .badge-legende {
+    display: block;
+    margin-top: 0.4rem;
+    font-family: "Courier New", monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.06em;
+    color: #555;
+  }
+  h1 {
+    text-align: center;
+    font-family: "Arial Black", Arial, sans-serif;
+    letter-spacing: 0.04em;
+    font-size: 1.5rem;
+    margin: 1.2rem 0 0.3rem;
+  }
+  .fonction { text-align: center; margin: 0 0 1.6rem; font-size: 0.9rem; color: #4a4740; }
+  .alerte { color: #c9860b; }
+  dl.fiche-id { max-width: 460px; margin: 0 auto 1.5rem; padding: 0 1.5rem; }
+  dl.fiche-id dt {
+    text-transform: uppercase;
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    color: #c9860b;
+    font-weight: bold;
+    margin-top: 0.8rem;
+  }
+  dl.fiche-id dd { margin: 0.15rem 0 0; font-size: 0.9rem; }
+  .sous-titre-liste {
+    max-width: 460px;
+    margin: 0 auto 0.4rem;
+    padding: 0 1.5rem;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    color: #4a4740;
+    font-weight: bold;
+  }
+  .check-liste { max-width: 460px; margin: 0 auto 1.6rem; padding: 0 1.5rem; list-style: none; }
+  .check-liste li { padding-left: 1.4rem; position: relative; margin-bottom: 0.35rem; font-size: 0.9rem; }
+  .check-liste li::before { content: "✓"; position: absolute; left: 0; color: #1a7a3c; font-weight: bold; }
+  .surligne {
+    max-width: 460px;
+    margin: 0 auto 1.5rem;
+    padding: 0.15rem 1.5rem;
+    background: linear-gradient(to bottom, transparent 60%, #f9dd7a 60%);
+    font-style: italic;
+    font-size: 0.92rem;
+    line-height: 1.7;
+  }
+  .texte { max-width: 460px; margin: 0 auto 1.4rem; padding: 0 1.5rem; font-size: 0.9rem; line-height: 1.6; }
+  .lien { max-width: 460px; margin: 0 auto 0.5rem; padding: 0 1.5rem; font-weight: bold; }
+  .lien a { color: #c9860b; text-decoration: none; }
+  .lien a:hover { text-decoration: underline; }
+  .pied { max-width: 460px; margin: 0 auto; padding: 0 1.5rem 1.5rem; color: #8a857a; font-size: 0.8rem; }
 </style>
 </head>
 <body>
-  <div class="rd-head">
+
+<div class="bande-danger" aria-hidden="true"></div>
+
+<div class="page-secu">
+
+  <div class="badge-acces">
     <img src="remi-darnal.webp" alt="Rémi Darnal">
-    <div>
-      <h1>Rémi Darnal</h1>
-      <p>Formateur sécurité travail en hauteur — Marseille</p>
-    </div>
+    <span class="badge-legende">ACCÈS CHANTIER</span>
   </div>
 
-  <table class="rd-cv">
-    <tr><td>Formation initiale</td><td>BTS bâtiment, CQP1 cordiste passé à Millau à 22 ans</td></tr>
-    <tr><td>Terrain</td><td>12 ans cordiste — ravalement, désamiantage, inspection d'ouvrages, soudure en hauteur sur pylônes (Marseille, Lyon, chantiers industriels)</td></tr>
-    <tr><td>Certifications</td><td>CQP2, IRATA niveau 3</td></tr>
-    <tr><td>Aujourd'hui</td><td>Formateur — cordistes, nacellistes, couvreurs, élagueurs grimpeurs ; fait passer les CACES nacelle R486 et les habilitations travail en hauteur</td></tr>
-  </table>
+  <h1>RÉMI DARNAL</h1>
+  <p class="fonction"><span class="alerte">⚠</span> Formateur sécurité travail en hauteur — Marseille</p>
 
-  <div class="rd-story">
-    <p>À 34 ans, une chute sans gravité sur un chantier de désamiantage m'a fait réfléchir. J'ai passé mon CQP2, ma certification IRATA niveau 3, puis je me suis orienté vers la formation. Depuis 8 ans, je forme sur le terrain plutôt que sur des chantiers — mais je n'ai jamais arrêté d'y penser en ces termes : ce qu'on n'apprend pas en salle, ce sont les réalités qui coûtent cher quand on les découvre trop tard.</p>
+  <dl class="fiche-id">
+    <dt>Formation initiale</dt><dd>BTS bâtiment, CQP1 cordiste (Millau, 22 ans)</dd>
+    <dt>Terrain</dt><dd>12 ans cordiste — ravalement, désamiantage, inspection d'ouvrages, soudure en hauteur</dd>
+    <dt>Aujourd'hui</dt><dd>Formateur cordistes / nacellistes / couvreurs / élagueurs grimpeurs</dd>
+  </dl>
 
-    <p class="rd-quote">« Sur un chantier de désamiantage à La Joliette, j'ai vu un gars porter son harnais à l'envers pendant deux heures. Personne ne lui avait montré. C'est exactement pour ça que j'ai lancé SOS Voltige. »</p>
+  <p class="sous-titre-liste">Certifications</p>
+  <ul class="check-liste">
+    <li>CQP2</li>
+    <li>IRATA niveau 3</li>
+    <li>Habilitation formateur CACES nacelle R486</li>
+  </ul>
 
-    <p>Le site rassemble ce que je transmets en formation : fiches métier honnêtes (salaire réel, pas les chiffres marketing), guides CQP/CACES/IRATA, comparatifs entre métiers du travail en hauteur, réglementation traduite du juridique en langage de chantier, et le matériel que j'utilise et recommande — harnais, longes, descendeurs.</p>
-  </div>
+  <p class="surligne">Sur un chantier de désamiantage à La Joliette, j'ai vu un gars porter son harnais à l'envers pendant deux heures. Personne ne lui avait montré. C'est exactement pour ça que j'ai lancé SOS Voltige.</p>
 
-  <p class="rd-out">→ <a href="https://sosvoltige.fr">sosvoltige.fr</a></p>
-  <p class="rd-foot">&copy; Rémi Darnal</p>
+  <p class="texte">À 34 ans, une chute sans gravité m'a fait passer du terrain à la formation. Le site rassemble ce que je transmets : fiches métier honnêtes, guides CQP/CACES/IRATA, réglementation traduite en langage de chantier, et le matériel que j'utilise réellement — harnais, longes, descendeurs.</p>
+
+  <p class="lien">→ <a href="https://sosvoltige.fr">sosvoltige.fr</a></p>
+  <p class="pied">&copy; Rémi Darnal</p>
+
+</div>
+
+<div class="bande-danger" aria-hidden="true"></div>
+
 </body>
 </html>
